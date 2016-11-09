@@ -1,1 +1,1 @@
-# SImpleAndroidMVP-Dagger2-JavaRx-ActiveAndroidORM
+# SimpleAndroidMVP-Dagger2-JavaRx+ActiveAndroidORM

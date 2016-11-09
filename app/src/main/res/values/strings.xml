@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android Developer Test</string>
+    <string name="title_activity_main">Tasks</string>
+    <string name="task_name">Task Name</string>
+    <string name="add_new">New Task</string>
+    <string name="selected_count">Selected: %1$d</string>
+    <string name="action_remove">Remove</string>
+    <string name="pls_enter_name">Please enter a name</string>
+    <string name="no_item_found">No Item Found!!!</string>
+</resources>
