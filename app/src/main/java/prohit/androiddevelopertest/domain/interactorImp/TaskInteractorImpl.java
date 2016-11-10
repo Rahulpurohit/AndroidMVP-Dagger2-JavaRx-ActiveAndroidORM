@@ -21,6 +21,7 @@ public class TaskInteractorImpl implements TaskInteractor {
     public TaskInteractorImpl(ApiService apiService, BaseScheduler baseScheduler) {
         this.apiService = apiService;
         this.schedulers = baseScheduler;
+
     }
 
     @Override

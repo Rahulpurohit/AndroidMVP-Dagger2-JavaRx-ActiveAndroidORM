@@ -1,6 +1,5 @@
 package prohit.androiddevelopertest.domain.presenter;
 
-import com.activeandroid.ActiveAndroid;
 import com.activeandroid.query.Select;
 
 import java.util.List;
@@ -72,7 +71,6 @@ public class TaskPresenter implements BasePresenter<TaskResponse> {
 
             @Override
             public void onNext(TaskResponse response) {
-                ActiveAndroid.beginTransaction();
                 try {
                     final List<Task> taskList = response.getTask();
                     for (int i = 0; i < taskList.size(); i++) {
@@ -101,17 +99,17 @@ public class TaskPresenter implements BasePresenter<TaskResponse> {
                         }//1 is the id
 
                     }
-                    ActiveAndroid.setTransactionSuccessful();
+    /*                ActiveAndroid.setTransactionSuccessful();
+                    ActiveAndroid.endTransaction();*/
+
                 } catch (Exception ex) {
-
+                    ex.printStackTrace();
                 } finally {
-                    ActiveAndroid.endTransaction();
+                    if (view != null) {
+                        view.setModel(response);
+                    }
                 }
-                if (view != null) {
-
-                    view.setModel(response);
-                }
-            }
+                     }
         };
     }
 }
