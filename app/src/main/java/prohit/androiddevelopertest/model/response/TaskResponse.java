@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 public class TaskResponse {
-    @SerializedName("task")
+    @SerializedName("data")
     @Expose
     private List<Task> task = new ArrayList<Task>();
 
